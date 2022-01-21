@@ -72,6 +72,8 @@ async def sent(event):
 					counter = 0
 				except:
 					await event.reply(".txt boşdur")
+					counter = 0
+					
 			else:
 				pass
 
