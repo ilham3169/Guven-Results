@@ -36,13 +36,14 @@ api_id = 10097563
 api_hash = "55bebccb5fdf45b664bbafb454bf2d97"
 bot = "5071498609:AAGfz_LgEs8uC75aHgctnsj9RORuexF5OZs"
 
-client = TelegramClient("guvendb2", api_id, api_hash).start(bot_token= bot)
+
 client = TelegramClient("blok", api_id = api_id, api_hash = api_hash).start()
 entity = client.get_entity("https://t.me/+aNCo0DaC-14wZTY6")
 @client.on(events.NewMessage(pattern = "/start"))
 async def sent(event):
+	
 		counter  = 0
-		x = 6670000
+		x = 6650000
 		while x != 0:
 			r = requests.get(f"https://netice.az/result?type=2&exam=637&class=11&group=1&sector=1&code={x}")
 			soup = BeautifulSoup(r.content, "html.parser")
@@ -71,11 +72,12 @@ async def sent(event):
 					await client.send_file("guvenblok", "data.txt")
 					counter = 0
 				except:
-					await event.reply(".txt boşdur")
+					await client.send_message("guvenblok", ".txt boşdur.")
 					counter = 0
 					
 			else:
 				pass
+			"""
 
 
 
