@@ -43,7 +43,7 @@ entity = client.get_entity("https://t.me/+aNCo0DaC-14wZTY6")
 async def sent(event):
 	
 		counter  = 0
-		x = 6650000
+		x = 6119863
 		while x != 0:
 			r = requests.get(f"https://netice.az/result?type=2&exam=637&class=11&group=1&sector=1&code={x}")
 			soup = BeautifulSoup(r.content, "html.parser")
